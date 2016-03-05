@@ -93,6 +93,16 @@ document.getElementById('backgroundColorInput').onchange = function() {
 document.getElementById('save').onclick = function() {
 	if (document.getElementById('stickyText').style.fontFamily == "") {
 		document.getElementById('stickyText').style.fontFamily = "Helvetica";
+
+	};
+
+	if (document.getElementById('stickyText').style.fontSize == "") {
+		document.getElementById('stickyText').style.fontSize = "16pt";
+		
+	};
+
+	if (document.getElementById('stickyId').style.backgroundColor == "") {
+		document.getElementById('stickyId').style.backgroundColor = "lemonchiffon";
 		
 	};
 
