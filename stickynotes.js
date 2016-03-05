@@ -91,6 +91,11 @@ document.getElementById('backgroundColorInput').onchange = function() {
 };
 
 document.getElementById('save').onclick = function() {
+	if (document.getElementById('stickyText').style.fontFamily == "") {
+		document.getElementById('stickyText').style.fontFamily = "Helvetica";
+		
+	};
+
 	localStorage.setItem('noteKatCanvas', document.getElementById('stickyCanvas').innerHTML);
 	
 	var saveNoteTexts = [];
