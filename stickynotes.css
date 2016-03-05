@@ -1,0 +1,263 @@
+#title {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#newSticky {
+	position: absolute;
+	top: 100px;
+	left: 5px;
+	width: 200px;
+	height: 35px;
+	
+}
+
+#newSticky span {
+	color: white;
+}
+
+
+#stickyNoteFactory {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 150px;
+	left: 5px;
+	border: 2px solid black;
+
+}
+
+#toolbar {
+	position: absolute;
+	top: 10px;
+	border: 2px solid black;
+	height: 70px;
+	width: 490px;
+	left: 250px;
+	background-color: #E5FFFF;
+	z-index: 0;
+	border-radius: 10px;
+}
+
+
+.sticky {
+	width: 200px;
+	height: 200px;
+	background-color: lemonchiffon;
+	padding-top: 16px;
+	padding-left: 32px;
+	padding-right: 15px;
+	resize: both;
+	overflow: hidden;
+	position: absolute;
+	top: 150px;
+	box-shadow: 10px 10px 5px grey;
+	background-size: 100px 100px;
+	z-index: 1;
+	cursor: move;
+
+
+}
+
+#stickyimg {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+
+}
+
+
+
+ #stickyText {
+ 	background-color: transparent;
+ 	width: 100%;
+ 	height: 100%;
+ 	font-family: Arial, Helvetica, sans-serif;
+ 	resize: none;
+ 	border: none;
+ 	z-index: 80;
+ 	font-size: 16pt;
+ }
+ #closeSticky {
+ 	position: absolute;
+  	top: 0;
+  	right: 0;
+  	z-index: 99;
+ }
+ #insertImage {
+ 	position: absolute;
+ 	left: 0;
+ 	bottom: 5px;
+ 	z-index: 99;
+
+
+ 	
+ }
+ /*#helvetica {
+ 	position: absolute;
+ 	top: 20px;
+ 	left: 300px;
+ 	background-color: #0FF;
+ 	width: 100px;
+ 	height: 25px;
+ 	font-family: helvetica;
+ 	padding: 10px;
+ 	font-size: 14pt;
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	
+ }
+
+ #arial {
+ 	position: absolute;
+ 	top: 20px;
+ 	left: 425px;
+ 	background-color: #0FF;
+ 	width: 100px;
+ 	height: 25px;
+ 	font-family: arial;
+ 	padding: 10px;
+ 	font-size: 14pt;
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	
+ }
+
+ #monospace {
+ 	position: absolute;
+ 	top: 20px;
+ 	left: 550px;
+ 	background-color: #0FF;
+ 	width: 100px;
+ 	height: 25px;
+ 	font-family: monospace;
+ 	padding: 10px;
+ 	font-size: 14pt;
+ 	text-align: center;
+ 	border-radius: 5px;
+
+ }*/
+
+  
+
+  #increaseAndDecreaseFontSize {
+ 	position: absolute;
+ 	top: 10px;
+ 	left: 185px;
+ 	background-color: #0FF;
+ 	width: 100px;
+ 	height: 30px;
+ 	font-family: helvetica;
+ 	padding: 10px;
+ 	font-size: 10pt;
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	z-index: 1;
+ 	
+ }
+
+ #increaseAndDecreaseFontSize input {
+ 	border-radius: 7px;
+ }
+
+ #changeFontSize {
+ 	width: 95px;
+ 	position: absolute;
+ 	/*bottom: 0;*/
+ 	left: 0;
+ 	margin-left: 10px;
+
+ 	
+ }
+
+ #fontDropdown {
+ 	position: absolute;
+ 	top: 10px;
+ 	left: 10px;
+ 	background-color: #0FF;
+ 	width: 150px;
+ 	height: 30px;
+ 	font-family: helvetica;
+ 	font-size: 10pt;
+ 	padding: 10px; 	
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	z-index: 1;
+ }
+
+ #changeBackgroundColor {
+ 	position: absolute;
+ 	top: 10px;
+ 	left: 310px;
+ 	background-color: #0FF;
+ 	width: 150px;
+ 	height: 30px;
+ 	font-family: helvetica;
+ 	font-size: 10pt;
+ 	padding: 10px; 	
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	z-index: 1;
+ }
+
+ #fontSelect {
+ 	border-radius: 7px;
+ }
+
+ #backgroundColorInput {
+ 	border-radius: 7px;
+ 	width: 100px;
+ }
+
+ #version {
+ 	position: fixed;
+ 	font-family: arial;
+ 	bottom: 0;
+ }
+
+ #top_buttons {
+ 	position: absolute;
+ 	right: 10px;
+ 	top: 10px;
+ 	width: 150px;
+ }
+
+ #save {
+ 	position: absolute;
+ 	right: 0; 
+
+ }
+
+ #account_button {
+ 	position: absolute;
+ 	left: 0;
+ 	background-color: transparent;
+ 	border: none !important;
+
+
+ }
+
+ #account_button i {
+ 	font-size: 40px;
+ }
+
+.saved {
+	width: 200px;
+	height: 20px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	bottom: 10px;
+	background-color: #383838;
+	color: #F0F0F0;
+	font-family: arial;
+	font-size: 20px;
+	padding: 10px;
+	text-align: center;
+	z-index: 5;
+}
+
+ 
+
+
+
+

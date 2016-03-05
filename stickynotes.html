@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/png/" href="favicon.png">
+	<link rel = "stylesheet" type="text/css" href = "stickynotes.css">
+	<title>NoteKat!</title>
+</head>
+<body>
+<div id="title">
+	<h1>NoteKat!</h1>
+</div>
+	<button id="newSticky" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><span>New Stickynote</span></button>
+	<div id="stickyCanvas">
+		<div id="stickyNoteFactory">
+			<p>New stickynotes will appear here!</p>
+		</div>
+	</div>
+	<div id="toolbar">
+		<div id="fontDropdown">
+			Font:
+			<br>
+			<select id="fontSelect">
+				<option value="Helvetica">Helvetica</option>
+				<option value="Arial">Arial</option>
+				<option value="Courier New">Courier New</option>				
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="Impact, Charcoal, sans-serif">Impact</option>
+				<option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
+
+				
+				
+			</select>
+		</div>
+
+		
+		<div id="increaseAndDecreaseFontSize">
+			Font Size:
+			<br>
+			<input id = "changeFontSize" type = "number" value = "16" name="fontSize">
+		</div>
+
+		<div id="changeBackgroundColor">
+			Stickynote Color:
+			<br>
+			<input id = "backgroundColorInput" type = "text" value = "lemonchiffon" name="colorValue">
+		</div>
+	</div>
+
+		
+		<div id="version">Version 1.7.5 <br> Using Assets From <a href="https://www.google.com/design/icons/" target="_blank">Material Design Icons</a></div>
+		
+		<div id="top_buttons">
+			<button id="save" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><span>Save</span></button>
+
+			<button id="load" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><span>Load</span></button>
+
+			
+		</div>
+		<div class="saved" style="display:none">Notes Saved!</div>
+		
+	
+    <script src="jquery.js"></script>
+    <script src="jqueryui.js"></script>
+    <script type="text/javascript" src = "stickynotes.js"></script>
+    <link rel="stylesheet" href="material.css"/>
+	<script src="material.js"></script>
+	<link rel="stylesheet" href="fonts.css">
+	
+</body>
+</html>
