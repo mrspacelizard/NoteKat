@@ -1,3 +1,4 @@
+var loadFont;
 //~~~~~~~~~~~~~~~~Function Definitions~~~~~~~~~~~~~~~~
 var upload_image = function(arg) {
 	$(arg).find("#insertImage").click(function() {
@@ -91,18 +92,24 @@ document.getElementById('backgroundColorInput').onchange = function() {
 };
 
 document.getElementById('save').onclick = function() {
-	if (document.getElementById('stickyText').style.fontFamily == "") {
-		document.getElementById('stickyText').style.fontFamily = "Helvetica";
+	if (document.getElementsByClassName('sticky').length > 0) {
+		if (document.getElementById('stickyText').style.fontFamily == "") {
+			document.getElementById('stickyText').style.fontFamily = "Helvetica";
+		};
+	
+		if (document.getElementById('stickyText').style.fontSize == "") {
+			document.getElementById('stickyText').style.fontSize = "16pt";
+			
+		};
 
-	};
+		if (document.getElementById('stickyId').style.backgroundColor == "") {
+			document.getElementById('stickyId').style.backgroundColor = "lemonchiffon";	
+		};
 
-	if (document.getElementById('stickyText').style.fontSize == "") {
-		document.getElementById('stickyText').style.fontSize = "16pt";
-		
-	};
-
-	if (document.getElementById('stickyId').style.backgroundColor == "") {
-		document.getElementById('stickyId').style.backgroundColor = "lemonchiffon";
+		$('.saved').fadeIn(400).delay(1500).fadeOut(400);
+	} 
+	else {
+		//console.log("Workng!");
 		
 	};
 
@@ -114,7 +121,7 @@ document.getElementById('save').onclick = function() {
 	});
 
 	localStorage.setItem('noteTexts', JSON.stringify(saveNoteTexts));
-	$('.saved').fadeIn(400).delay(1500).fadeOut(400);
+	
 };
 
 document.getElementById('load').onclick = function() {
@@ -135,13 +142,27 @@ document.getElementById('load').onclick = function() {
 		closeTheSticky();
 
 		var loadNoteTexts = JSON.parse(localStorage.getItem('noteTexts'));
-		console.log(loadNoteTexts);
+		//console.log(loadNoteTexts);
 		$('.stickyText').each(function(index) {
-			console.log(loadNoteTexts[index]);
+			//console.log(loadNoteTexts[index]);
 			$(this).val(loadNoteTexts[index]);
 		});
 
-		document.getElementById("fontSelect").value = document.getElementById('stickyText').style.fontFamily;
+		loadFont = document.getElementById('stickyText').style.fontFamily;
+		if (loadFont.indexOf(' ') > 0) {
+			console.log(loadFont);
+			// loadFont.slice(1, -1);
+			console.log(loadFont);
+			document.getElementById("fontSelect").value = loadFont.slice(1, -1);
+			//document.getElementById("fontSelect").value = String(loadFont);
+
+		} 
+		else {
+			console.log(loadFont);
+			document.getElementById("fontSelect").value = String(loadFont);
+		};
+
+		// document.getElementById("fontSelect").value = document.getElementById('stickyText').style.fontFamily;
 		document.getElementById("backgroundColorInput").value = document.getElementById('stickyId').style.backgroundColor;
 		document.getElementById("changeFontSize").value = Number(document.getElementById('stickyText').style.fontSize.slice(0, -2));
 					
