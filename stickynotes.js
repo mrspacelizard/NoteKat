@@ -1,6 +1,7 @@
 var loadFont;
 //~~~~~~~~~~~~~~~~Function Definitions~~~~~~~~~~~~~~~~
 var upload_image = function(arg) {
+
 	$(arg).find("#insertImage").click(function() {
 		var imageUrl = prompt(imagePrompt);
 		$(arg).find("#stickyimg").remove();
@@ -25,9 +26,11 @@ var imagePrompt = "Paste in the URL of the image that you would like to use.";
 
 var stickyClick = function() {
 	var mySticky = document.createElement('div');
+	var handle = document.createElement("div");
 	var myStickyText = document.createElement('textarea');
 	var closeSticky = document.createElement('img');
 	var insertImage = document.createElement('i');
+	mySticky.appendChild(handle);
 	mySticky.appendChild(myStickyText);
 	mySticky.appendChild(closeSticky);
 	mySticky.appendChild(insertImage);
@@ -36,12 +39,17 @@ var stickyClick = function() {
 	closeSticky.id = 'closeSticky';
 	insertImage.id = 'insertImage';
 	mySticky.id = 'stickyId';
+	handle.id = "handle";
 	myStickyText.className = 'stickyText mdl-textfield__input';
 	mySticky.className = 'sticky';
+	handle.className = "handle";
 	insertImage.className = 'material-icons';
 	insertImage.textContent = 'insert_photo';
 	closeSticky.src = 'x-button.png';
 	insertImage.src = 'insertimg.png';
+	mySticky.style.position = "absolute";
+	mySticky.style.top = "150px";
+	mySticky.style.left = "5px;"
 
 	
 
@@ -49,7 +57,9 @@ var stickyClick = function() {
 
 	closeTheSticky();
 
-	$(".sticky").draggable();
+	$(".sticky").draggable({
+		handle: ".handle"
+	});
 
 };
 
@@ -131,15 +141,23 @@ document.getElementById('load').onclick = function() {
 	else {
 		document.getElementById('stickyCanvas').innerHTML = localStorage.getItem('noteKatCanvas');
 		
-		$('.sticky').draggable();
+		
 		
 		// upload_image();
 		var stickies = document.getElementsByClassName('sticky');
 		$(stickies).each(function() {
 			upload_image(this);
+
 		});
 
 		closeTheSticky();
+		
+		$(".sticky").draggable({
+			handle: ".handle"
+		});
+
+		
+		
 
 		var loadNoteTexts = JSON.parse(localStorage.getItem('noteTexts'));
 		//console.log(loadNoteTexts);
@@ -165,8 +183,9 @@ document.getElementById('load').onclick = function() {
 		// document.getElementById("fontSelect").value = document.getElementById('stickyText').style.fontFamily;
 		document.getElementById("backgroundColorInput").value = document.getElementById('stickyId').style.backgroundColor;
 		document.getElementById("changeFontSize").value = Number(document.getElementById('stickyText').style.fontSize.slice(0, -2));
-					
+
 	};
+	
 	
 };
 

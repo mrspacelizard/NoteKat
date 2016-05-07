@@ -48,13 +48,22 @@
 	resize: both;
 	overflow: hidden;
 	position: absolute;
-	top: 150px;
 	box-shadow: 10px 10px 5px grey;
 	background-size: 100px 100px;
 	z-index: 1;
+	
+
+
+}
+
+.handle {
+	background-color: #65ef2c;
+	height: 16px;
+	width: 100%;
 	cursor: move;
-
-
+	margin-left: -32px;
+	margin-top: -16px;
+	position: absolute;
 }
 
 #stickyimg {
@@ -81,6 +90,7 @@
   	top: 0;
   	right: 0;
   	z-index: 99;
+  	background-color: #65ef2c;
  }
  #insertImage {
  	position: absolute;
@@ -217,14 +227,21 @@
  	position: absolute;
  	right: 10px;
  	top: 10px;
- 	width: 150px;
+ 	width: 200px;
  }
 
  #save {
  	position: absolute;
  	right: 0; 
 
+
  }
+
+ #load {
+ 	position: absolute;
+ 	left: 0;
+ }
+
 
  #account_button {
  	position: absolute;
@@ -254,6 +271,11 @@
 	padding: 10px;
 	text-align: center;
 	z-index: 5;
+}
+
+.icon_container {
+	position: absolute;
+	left: 0;
 }
 
  
