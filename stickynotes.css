@@ -28,13 +28,13 @@
 #toolbar {
 	position: absolute;
 	top: 10px;
-	border: 2px solid black;
+	/*border: 2px solid black;*/
 	height: 70px;
 	width: 490px;
 	left: 250px;
-	background-color: #E5FFFF;
+	/*background-color: #E5FFFF;*/
 	z-index: 0;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 
@@ -57,7 +57,7 @@
 }
 
 .handle {
-	background-color: #65ef2c;
+	background-color: #FFE1CF;
 	height: 16px;
 	width: 100%;
 	cursor: move;
@@ -90,7 +90,7 @@
   	top: 0;
   	right: 0;
   	z-index: 99;
-  	background-color: #65ef2c;
+  	background-color: #FFE1CF;
  }
  #insertImage {
  	position: absolute;
@@ -146,7 +146,20 @@
 
  }*/
 
-  
+   #fontDropdown {
+ 	position: absolute;
+ 	top: 10px;
+ 	left: 10px;
+ 	background-color: #0FF;
+ 	width: 150px;
+ 	height: 30px;
+ 	font-family: helvetica;
+ 	font-size: 10pt;
+ 	padding: 10px; 	
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	z-index: 1;
+ }
 
   #increaseAndDecreaseFontSize {
  	position: absolute;
@@ -164,34 +177,7 @@
  	
  }
 
- #increaseAndDecreaseFontSize input {
- 	border-radius: 7px;
- }
 
- #changeFontSize {
- 	width: 95px;
- 	position: absolute;
- 	/*bottom: 0;*/
- 	left: 0;
- 	margin-left: 10px;
-
- 	
- }
-
- #fontDropdown {
- 	position: absolute;
- 	top: 10px;
- 	left: 10px;
- 	background-color: #0FF;
- 	width: 150px;
- 	height: 30px;
- 	font-family: helvetica;
- 	font-size: 10pt;
- 	padding: 10px; 	
- 	text-align: center;
- 	border-radius: 5px;
- 	z-index: 1;
- }
 
  #changeBackgroundColor {
  	position: absolute;
@@ -208,11 +194,47 @@
  	z-index: 1;
  }
 
+ #changeTextColor {
+ 	position: absolute;
+ 	top: 10px;
+ 	left: 485px;
+ 	background-color: #0FF;
+ 	width: 150px;
+ 	height: 30px;
+ 	font-family: helvetica;
+ 	font-size: 10pt;
+ 	padding: 10px;
+ 	text-align: center;
+ 	border-radius: 5px;
+ 	z-index: 1;
+ }
+
+  #increaseAndDecreaseFontSize input {
+ 	border-radius: 7px;
+ }
+
+ #changeFontSize {
+ 	width: 95px;
+ 	position: absolute;
+ 	/*bottom: 0;*/
+ 	left: 0;
+ 	margin-left: 10px;
+
+ 	
+ }
+
+
+
  #fontSelect {
  	border-radius: 7px;
  }
 
  #backgroundColorInput {
+ 	border-radius: 7px;
+ 	width: 100px;
+ }
+
+ #textColorInput {
  	border-radius: 7px;
  	width: 100px;
  }
@@ -226,7 +248,7 @@
  #top_buttons {
  	position: absolute;
  	right: 10px;
- 	top: 10px;
+ 	top: 20px;
  	width: 200px;
  }
 
@@ -276,6 +298,12 @@
 .icon_container {
 	position: absolute;
 	left: 0;
+}
+
+h1 {
+	position: absolute;
+	top: -20px;
+	height: 30px;
 }
 
  

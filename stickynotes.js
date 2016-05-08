@@ -84,6 +84,13 @@ var changeStickyBackground = function(backgroundColor) {
 	};
 };
 
+var changeStickyTextColor = function(textColor) {
+	var allStickies = document.getElementsByClassName("stickyText");
+	for (var i = 0; i < allStickies.length; i++) {
+		allStickies[i].style.color = textColor;
+	};
+};
+
 //~~~~~~~~~~~~~~~~Event Definitions~~~~~~~~~~~~~~~~
 
 document.getElementById('newSticky').onclick = stickyClick;
@@ -101,6 +108,12 @@ document.getElementById('backgroundColorInput').onchange = function() {
 	changeStickyBackground(this.value);
 };
 
+document.getElementById('textColorInput').onchange = function() {
+	changeStickyTextColor(this.value);
+};
+
+
+
 document.getElementById('save').onclick = function() {
 	if (document.getElementsByClassName('sticky').length > 0) {
 		if (document.getElementById('stickyText').style.fontFamily == "") {
@@ -114,6 +127,10 @@ document.getElementById('save').onclick = function() {
 
 		if (document.getElementById('stickyId').style.backgroundColor == "") {
 			document.getElementById('stickyId').style.backgroundColor = "lemonchiffon";	
+		};
+
+		if (document.getElementById('stickyText').style.color == "") {
+			document.getElementById('stickyText').style.color = "black";	
 		};
 
 		$('.saved').fadeIn(400).delay(1500).fadeOut(400);
